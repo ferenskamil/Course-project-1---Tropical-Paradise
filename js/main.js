@@ -1,6 +1,6 @@
 const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.burger-btn');
-const allNnavItems = document.querySelectorAll('.nav__item');
+const allNavItems = document.querySelectorAll('.nav__item');
 
 const toggleNav = () => {
 	nav.classList.toggle('nav--active');
@@ -8,6 +8,8 @@ const toggleNav = () => {
 
 navBtn.addEventListener('click', toggleNav);
 
-allNnavItems.forEach((i) => {
-	i.addEventListener('click', toggleNav);
+allNavItems.forEach((i) => {
+	i.addEventListener('click', () => {
+		nav.classList.remove('nav--active');
+	});
 });
