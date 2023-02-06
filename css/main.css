@@ -212,6 +212,28 @@ body {
   transform: scaleY(1);
 }
 
+@-webkit-keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  -webkit-animation: navItemsAnimation 1s;
+          animation: navItemsAnimation 1s;
+}
+
 .header {
   position: absolute;
   display: flex;
