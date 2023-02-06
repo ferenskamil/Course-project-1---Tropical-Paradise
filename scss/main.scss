@@ -77,3 +77,17 @@ body {
 		}
 	}
 }
+
+// HEADER
+.header {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// miejsce do oddychania (głównie chodzi o urządzenia mobilne)
+	padding: 2em;
+	height: 75vh;
+	text-align: center;
+	color: colors.$pure-white;
+}
