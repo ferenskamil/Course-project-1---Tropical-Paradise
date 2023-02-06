@@ -1,0 +1,11 @@
+@use './colors' as colors;
+
+@mixin burgerBtn {
+	content: '';
+	position: absolute;
+	right: 0;
+	height: 3px;
+	background-color: colors.$pure-white;
+	// background-color: red;
+	transition: width 0.3s;
+}
