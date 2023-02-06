@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open_Sans', sans-serif;
 	font-size: 1.6rem;
 }
 
@@ -88,6 +88,8 @@ body {
 	// miejsce do oddychania (głównie chodzi o urządzenia mobilne)
 	padding: 2em;
 	height: 75vh;
+	width: 100%;
 	text-align: center;
 	color: colors.$pure-white;
+	@include mixins.heroImages('../img/paradise_small.jpg');
 }
