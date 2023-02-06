@@ -88,7 +88,7 @@ body {
 	width: 100%;
 	transform: translateX(100%);
 	background-image: colors.$blue-gradient-solid;
-	transition: transform 1s;
+	transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 	z-index: 100;
 
 	&--active {
