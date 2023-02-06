@@ -71,10 +71,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: rgb(78, 103, 180);
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }/*# sourceMappingURL=main.css.map */

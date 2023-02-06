@@ -13,10 +13,12 @@
 
 html {
 	font-size: 62.5%;
+	// żeby nam się strona płynnie przesuwała
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: rgb(78, 103, 180);
 	color: #fff;
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', sans-serif;
 }
