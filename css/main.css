@@ -182,7 +182,11 @@ body {
   width: 100%;
   transform: translateX(100%);
   background-image: linear-gradient(45deg, rgb(20, 105, 241), rgb(42, 10, 184));
+  transition: transform 1s;
   z-index: 100;
+}
+.nav--active {
+  transform: translateX(0);
 }
 .nav__item {
   position: relative;

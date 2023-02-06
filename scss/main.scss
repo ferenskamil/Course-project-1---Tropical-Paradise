@@ -88,7 +88,12 @@ body {
 	width: 100%;
 	transform: translateX(100%);
 	background-image: colors.$blue-gradient-solid;
+	transition: transform 1s;
 	z-index: 100;
+
+	&--active {
+		transform: translateX(0);
+	}
 
 	&__item {
 		position: relative;
