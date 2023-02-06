@@ -10,6 +10,20 @@ const toggleNav = () => {
 			nav.classList.remove('nav--active');
 		});
 	});
+
+	handleNavItemsAnimation();
+};
+
+const handleNavItemsAnimation = () => {
+	let delayTime = 0;
+
+	allNavItems.forEach((i) => {
+		i.classList.toggle('nav-items-animation');
+
+		// animation-delay: .3s
+		i.style.animationDelay = `.${delayTime}s`;
+		delayTime += 2;
+	});
 };
 
 navBtn.addEventListener('click', toggleNav);
