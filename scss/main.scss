@@ -1,4 +1,7 @@
 @use './fonts' as fonts;
+@use './colors' as colors;
+@use './components' as components;
+@use './mixins' as mixins;
 
 * {
 	box-sizing: border-box;
