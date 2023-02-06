@@ -4,12 +4,12 @@ const allNavItems = document.querySelectorAll('.nav__item');
 
 const toggleNav = () => {
 	nav.classList.toggle('nav--active');
+
+	allNavItems.forEach((i) => {
+		i.addEventListener('click', () => {
+			nav.classList.remove('nav--active');
+		});
+	});
 };
 
 navBtn.addEventListener('click', toggleNav);
-
-allNavItems.forEach((i) => {
-	i.addEventListener('click', () => {
-		nav.classList.remove('nav--active');
-	});
-});
