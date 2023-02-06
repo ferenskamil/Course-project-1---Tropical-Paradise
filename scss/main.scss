@@ -92,4 +92,33 @@ body {
 	text-align: center;
 	color: colors.$pure-white;
 	@include mixins.heroImages('../img/paradise_small.jpg');
+	// W mixinie mamy fixed a chcemy mieć scroll
+	background-attachment: scroll;
+
+	&__title {
+		font-family: 'Dancing_Script', cursive;
+		font-size: 4.8rem;
+		font-weight: 300;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+	}
+
+	&__btn {
+		margin-top: 2em;
+		padding: 0.8em 1.6em;
+		font-size: 1.4rem;
+		background-color: colors.$pure-white;
+		border: none;
+		border-radius: 8px;
+		color: colors.$dark;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&::before {
+			background-color: colors.$light-white;
+		}
+	}
 }
