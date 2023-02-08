@@ -1,7 +1,9 @@
+// Zmienne
 const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.burger-btn');
 const allNavItems = document.querySelectorAll('.nav__item');
 
+// Funkcja odpowiadająca za wysuwanie i chowanie nawigacji 
 const toggleNav = () => {
 	nav.classList.toggle('nav--active');
 
@@ -14,6 +16,7 @@ const toggleNav = () => {
 	handleNavItemsAnimation();
 };
 
+// Funkcja odpowiadająca za animację (opóźnienie, elementów nawigacji)
 const handleNavItemsAnimation = () => {
 	let delayTime = 0;
 
@@ -26,4 +29,6 @@ const handleNavItemsAnimation = () => {
 	});
 };
 
+
+// eventy 
 navBtn.addEventListener('click', toggleNav);
