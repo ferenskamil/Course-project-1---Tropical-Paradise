@@ -183,6 +183,10 @@ body {
 
 // MAIN
 
+.main {
+	position: relative;
+}
+
 // DREAMS SECTION
 .dreams {
 	&__box {
@@ -223,6 +227,125 @@ body {
 
 	&__text {
 		padding: 1em 0;
+	}
+}
+
+// ISLANDS
+.islands {
+	position: relative;
+
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+		color: colors.$pure-white;
+		text-align: center;
+		perspective: 1000px;
+
+		&:hover {
+			.islands__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+
+			.islands__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-img {
+			padding: 2em;
+			height: 100%;
+			border-radius: 8px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
+
+			&--first {
+				background-image: colors.$light-blue-gradient,
+					url(../img/coast_small.jpg);
+			}
+
+			&--second {
+				background-image: colors.$blue-gradient,
+					url(../img/palm_small.jpg);
+			}
+
+			&--third {
+				background-image: colors.$purple-gradient,
+					url(../img/palms-sea_small.jpg);
+			}
+
+			&-title {
+				font-family: 'Dancing_Script', cursive;
+				font-size: 2.8rem;
+			}
+
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.8rem;
+
+				i {
+					margin-right: 0.3em;
+				}
+			}
+		}
+
+		&-info {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-image: colors.$light-blue-gradient-solid;
+			border-radius: 8px;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+
+			&-title {
+				@include mixins.centreItemY;
+				top: 1.2em;
+				width: 90%;
+				font-family: 'Dancing_Script', cursive;
+				font-size: 2.8rem;
+			}
+
+			&-list {
+				&-item {
+					margin: 0 auto;
+					padding: 1em;
+					width: 70%;
+					font-size: 1.4rem;
+					border-bottom: 1px solid colors.$light-white;
+					list-style: none;
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+
+			&-btn {
+				@include mixins.centreItemY;
+				bottom: 2em;
+				padding: 1em;
+				border-radius: 8px;
+				width: 80%;
+				border: none;
+				background-color: colors.$green-color;
+				cursor: pointer;
+
+				&::before {
+					background-color: colors.$green-color-hover;
+				}
+			}
+		}
 	}
 }
 
@@ -297,6 +420,19 @@ body {
 			font-size: 2.2rem;
 		}
 	}
+
+	.islands {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1em;
+			width: 45%;
+		}
+	}
 }
 @media (min-width: 992px) {
 	.burger-btn {
@@ -352,7 +488,13 @@ body {
 		}
 	}
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
+	.islands {
+		&__card {
+			margin: 1em;
+			width: 30%;
+		}
+	}
 }
 @media (min-width: 1400px) {
 }
