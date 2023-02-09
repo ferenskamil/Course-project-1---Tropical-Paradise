@@ -22,6 +22,11 @@ body {
 	font-size: 1.6rem;
 }
 
+button,
+textarea {
+	font-family: 'Open_Sans', sans-serif;
+}
+
 // NAV
 .burger-btn {
 	position: fixed;
@@ -453,6 +458,61 @@ body {
 	}
 }
 
+// CONTACT
+.contact {
+	position: relative;
+	background-color: colors.$light-white;
+	overflow: hidden;
+
+	.white-block-left {
+		background-color: colors.$dark;
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input,
+	&__form-textarea {
+		@include mixins.contactForm;
+		outline: none;
+
+		&:focus {
+			border: 1px solid colors.$dark;
+		}
+	}
+
+	&__form-textarea {
+		resize: vertical;
+		height: 150px;
+		max-height: 300px;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		font-size: 1.4rem;
+		color: colors.$pure-white;
+		background-color: colors.$main-color;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+
+		&::before {
+			background-color: colors.$secondary-color;
+		}
+	}
+}
+
 // ==================
 // MEDIA QUERIES
 // ==================
@@ -684,6 +744,15 @@ body {
 			&-btn {
 				font-size: 2rem;
 			}
+		}
+	}
+
+	.contact {
+		&__form-label {
+			font-size: 2rem;
+		}
+		&__form-btn {
+			font-size: 2rem;
 		}
 	}
 }
