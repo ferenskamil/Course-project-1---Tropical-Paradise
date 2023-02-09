@@ -7,7 +7,7 @@ const navBtnBars = document.querySelector('.burger-btn__bars');
 const allSections = document.querySelectorAll('.section');
 const footerYear = document.querySelector('.footer__year');
 
-// Funkcja odpowiadająca za wysuwanie i chowanie nawigacji
+// Function to extend and retract navigation
 const toggleNav = () => {
 	nav.classList.toggle('nav--active');
 
@@ -20,7 +20,7 @@ const toggleNav = () => {
 	handleNavItemsAnimation();
 };
 
-// Funkcja odpowiadająca za animację (opóźnienie, elementów nawigacji)
+// function that delays the ejection of elements
 const handleNavItemsAnimation = () => {
 	let delayTime = 0;
 
@@ -59,7 +59,7 @@ const handleCurrentYear = () => {
 	footerYear.textContent = year;
 };
 
-// events
+// Events
 handleCurrentYear();
 navBtn.addEventListener('click', toggleNav);
 window.addEventListener('scroll', handleObserver);
