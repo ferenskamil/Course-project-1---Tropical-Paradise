@@ -18,6 +18,7 @@ const toggleNav = () => {
 	});
 
 	handleNavItemsAnimation();
+	chaangeNavBarColor_navigation();
 };
 
 // function that delays the ejection of elements
@@ -34,7 +35,7 @@ const handleNavItemsAnimation = () => {
 };
 
 // Function changing navigation bars color while scrolling
-const handleObserver = () => {
+const changeNavBarColor_scroll = () => {
 	let currentScroll = window.scrollY;
 
 	allSections.forEach((item) => {
@@ -52,6 +53,15 @@ const handleObserver = () => {
 	});
 };
 
+// Function changing navigation bars color while opening navigation
+const chaangeNavBarColor_navigation = () => {
+	if (nav.classList.contains('nav--active')) {
+		navBtnBars.classList.remove('black-bars-color');
+	} else {
+		changeNavBarColor_scroll();
+	}
+};
+
 // Function changes cuurrent year in footer
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
@@ -62,4 +72,4 @@ const handleCurrentYear = () => {
 // Events
 handleCurrentYear();
 navBtn.addEventListener('click', toggleNav);
-window.addEventListener('scroll', handleObserver);
+window.addEventListener('scroll', changeNavBarColor_scroll);
