@@ -397,6 +397,7 @@ body {
 			margin-top: 1em;
 			padding: 0.8em;
 			width: 100%;
+			font-size: 1.4rem;
 			color: colors.$pure-white;
 			background-color: colors.$main-color;
 			border: none;
@@ -584,10 +585,9 @@ body {
 		background-image: colors.$blue-gradient,
 			url(../img/oferts-hero_large.jpg);
 
-		&-option {
+		&__option {
 			&-img {
 				object-fit: cover;
-				height: 300px;
 			}
 
 			&-heading {
@@ -595,7 +595,11 @@ body {
 			}
 
 			&-text {
-				font-size: 1.5rem;
+				font-size: 1.7rem;
+			}
+
+			&-btn {
+				font-size: 1.7rem;
 			}
 		}
 	}
@@ -611,6 +615,10 @@ body {
 	.offers {
 		&__option {
 			&-text {
+				font-size: 2rem;
+			}
+
+			&-btn {
 				font-size: 2rem;
 			}
 		}

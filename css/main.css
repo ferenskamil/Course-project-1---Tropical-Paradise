@@ -480,6 +480,7 @@ body {
   margin-top: 1em;
   padding: 0.8em;
   width: 100%;
+  font-size: 1.4rem;
   color: #fff;
   background-color: #1755e7;
   border: none;
@@ -616,16 +617,18 @@ body {
   .offers {
     background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/oferts-hero_large.jpg);
   }
-  .offers-option-img {
+  .offers__option-img {
     -o-object-fit: cover;
        object-fit: cover;
-    height: 300px;
   }
-  .offers-option-heading {
+  .offers__option-heading {
     font-size: 3.6rem;
   }
-  .offers-option-text {
-    font-size: 1.5rem;
+  .offers__option-text {
+    font-size: 1.7rem;
+  }
+  .offers__option-btn {
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 1100px) {
@@ -634,6 +637,9 @@ body {
     width: 30%;
   }
   .offers__option-text {
+    font-size: 2rem;
+  }
+  .offers__option-btn {
     font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
