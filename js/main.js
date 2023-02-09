@@ -3,6 +3,8 @@ const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.burger-btn');
 const allNavItems = document.querySelectorAll('.nav__item');
 
+const navBtnBars = document.querySelector('.burger-btn__bars');
+const allSections = document.querySelectorAll('.section');
 const footerYear = document.querySelector('.footer__year');
 
 // Funkcja odpowiadająca za wysuwanie i chowanie nawigacji
@@ -31,13 +33,33 @@ const handleNavItemsAnimation = () => {
 	});
 };
 
+// Function changing navigation bars color while scrolling
+const handleObserver = () => {
+	let currentScroll = window.scrollY;
+
+	allSections.forEach((item) => {
+		if (
+			item.classList.contains('white-section') &&
+			currentScroll >= item.offsetTop - 40
+		) {
+			navBtnBars.classList.add('black-bars-color');
+		} else if (
+			!item.classList.contains('white-section') &&
+			currentScroll >= item.offsetTop /* + 40 */
+		) {
+			navBtnBars.classList.remove('black-bars-color');
+		}
+	});
+};
+
 // Function changes cuurrent year in footer
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 
 	footerYear.textContent = year;
 };
-handleCurrentYear();
 
-// eventy
+// events
+handleCurrentYear();
 navBtn.addEventListener('click', toggleNav);
+window.addEventListener('scroll', handleObserver);

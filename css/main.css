@@ -207,6 +207,11 @@ textarea {
   width: 30%;
   transition-delay: 0.1s;
 }
+.burger-btn .black-bars-color,
+.burger-btn .black-bars-color::after,
+.burger-btn .black-bars-color::before {
+  background-color: #2e2e2e;
+}
 
 .nav {
   position: fixed;
@@ -301,10 +306,9 @@ textarea {
   background-color: #eee;
 }
 
-.main {
+.dreams {
   position: relative;
 }
-
 .dreams__box {
   display: flex;
   flex-direction: column;

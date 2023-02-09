@@ -81,7 +81,19 @@ textarea {
 			transition-delay: 0.1s;
 		}
 	}
+
+	.black-bars-color,
+	.black-bars-color::after,
+	.black-bars-color::before {
+		background-color: colors.$dark;
+	}
 }
+
+// .black-bars-color,
+// .black-bars-color::after,
+// .black-bars-color::before {
+// 	background-color: colors.$dark;
+// }
 
 .nav {
 	position: fixed;
@@ -186,14 +198,9 @@ textarea {
 	}
 }
 
-// MAIN
-
-.main {
-	position: relative;
-}
-
 // DREAMS SECTION
 .dreams {
+	position: relative;
 	&__box {
 		display: flex;
 		flex-direction: column;
