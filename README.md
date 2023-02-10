@@ -1,6 +1,4 @@
-# Course-project-1---Tropical-Paradise
-This is a web page from online course
-
+# Course project 1 - Tropical-Paradise
 This is a page I did during one of the school's 'mmcschool.co.uk' courses. The idea and choice of techniques are the intellectual property of the author of the course. 
 
 During this course I learned: 
