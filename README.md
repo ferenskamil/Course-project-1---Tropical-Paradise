@@ -7,3 +7,4 @@ During this course I learned:
 - use ready-made components in SAAS 
 - use external libraries like slick.js
 - new ways to expose content on a website
+- use git commands ;) 
